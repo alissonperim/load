@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.loading{
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  border: 20px solid #f7606080;
+  border-top: 20px solid #f76060;
+  border-radius: 50%;
+
+  animation: load 2s linear infinite;
+}
+
+@keyframes load {
+  to{
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.loading-span{
+  min-width: 20px;
+  height: 50px;
+  margin: 0 5px;
+  display: inline-block;
+  background-color: rgb(255, 153, 0);
+  border-radius: 50px;
+}
+
+.loading-span:nth-of-type(1){
+  animation: load 0.5s -0.50s ease-in-out alternate infinite;
+}
+
+.loading-span:nth-of-type(2){
+  animation: load 0.5s -0.35s ease-in-out alternate infinite;
+}
+
+.loading-span:nth-of-type(3){
+  animation: load 0.5s -0.25s ease-in-out alternate infinite;
+}
+
+.loading-span:nth-of-type(4){
+  animation: load 0.5s -0.15s ease-in-out alternate infinite;
+}
+
+@keyframes load {
+  to{
+    transform: scaleX(1.5) scaleY(1.5);
+  }
+}
